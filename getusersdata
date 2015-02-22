@@ -1,0 +1,180 @@
+#!/bin/bash
+
+# This script is under the GPL Licence
+
+date -u
+
+# Gets a list of users from the github API
+
+read -p "Enter your GitHub username : " username
+read -p "Enter the password for $username : " -s pass
+echo ""
+echo "Retrieving usernames..."
+curl -u $username:$pass https://api.github.com/users > github_users
+
+# Initiates folders, files and variables
+touch userlist
+echo "" > userlist
+mkdir users &> /dev/null
+touch userdetails
+echo "" > userdetails
+count=0
+countRep=0
+activeRep=0
+nrepos=0
+nissues=0
+pr_users=0
+m_users=0
+
+
+# For each user, retrieves only its username
+while read p
+do
+  if [[ "$p" == *"\"login\""* ]]
+  then
+  	echo $p | cut -d '"' -f 4 >> userlist
+  fi	
+done < github_users
+echo "Done retrieving usernames, retrieving user details... (can be long)"
+
+# For each username, retrieves the corresponding details
+while read p
+do
+	if [ "$p" != "" ]
+	then
+		let "count += 1"
+		echo "$count/100"
+		echo https://api.github.com/users/$p
+		curl -u $username:$pass https://api.github.com/users/$p >> userdetails
+		curl -u $username:$pass https://api.github.com/users/$p/repos > $p
+		mv "$p" "users/$p" &> /dev/null
+	fi
+done < userlist
+sed -i 's/,/ ,/g' userdetails &> /dev/null
+echo "Done retrieving user details"
+
+# Get the data from the retrieved details
+echo "Retrieving and crushing repositories' data from all users... (can be long enough to take a coffee)"
+while read p
+do
+	if [[ "$p" == *"\"public_repos\""* ]]
+	then
+		rep=`echo $p | cut -d " " -f 2 `
+		let "nrepos += rep"
+	fi
+done < userdetails
+let "nrepos /= count"
+
+cp userlist users/userlist
+cd users
+
+let "count = 0"
+tsize=0
+let "nOpIssues = 0"
+while read u
+do
+	# For current user
+	if [ "$u" != "" ]
+	then
+		does_pr=0
+		uses_m=0
+		let "count += 1"
+		echo "User $count of 100 being processed"
+		repo_name=""
+		sed -i 's/,/ ,/g' $u &> /dev/null
+		while read l
+		do
+			# For current repository of current user
+			if [[ "$l" == *"\"name\""* ]]
+			then
+				let "countRep += 1"
+				repo_name=`echo $l | cut -d '"' -f 4`
+				touch $repo_name
+				
+				milestones="_milestones"
+				touch "$repo_name$milestones"
+				fsize=`stat -c%s "$repo_name$milestones"`
+				# Hack which allows upon several launches to solve the API limit problem
+				if [ $fsize -eq 0 ] || [ $fsize -gt 119 ]
+				then
+					curl -u $username:$pass https://api.github.com/repos/$u/$repo_name/milestones > "$repo_name$milestones"
+					foo=0
+				fi
+				fsize=`stat -c%s "$repo_name$milestones"`
+				if [ $fsizeP -gt 138 ]
+				then
+					uses_m=1
+				fi
+				
+				pr="_pullrequest"
+				touch "$repo_name$pr"
+				fsizeP=`stat -c%s "$repo_name$pr"`
+				# Hack which allows upon several launches to solve the API limit problem
+				if [ $fsizeP -eq 0 ] || [ $fsizeP -gt 119 ]
+				then
+					curl -u $username:$pass https://api.github.com/repos/$u/$repo_name/pulls > "$repo_name$pr"
+					foo=0
+				fi
+				fsizeP=`stat -c%s "$repo_name$pr"`
+				if [ $fsizeP -gt 138 ]
+				then
+					does_pr=1
+				fi
+				
+			fi
+			if [[ "$l" == *"\"open_issues_count\""* ]]
+			then
+				issue=`echo $l | cut -d " " -f 2`
+				max_issue=0
+				if [ $issue -ne 0 ]
+				then
+					let "activeRep += 1"
+					curl -u $username:$pass https://api.github.com/repos/$u/$repo_name/issues >> $repo_name
+					sed -i 's/,/ ,/g' $repo_name &> /dev/null
+					while read i
+					# For current open issue from current repository of current user
+					# Retrieve the minimum number of issues on the repository based on the highest issue number from open issues
+					do
+						if [[ "$i" == *"\"number\""* ]]
+						then
+							cur_issue=`echo $i | cut -d " " -f 2`
+							if [ $cur_issue -gt $max_issue ]
+							then
+								let "max_issue = cur_issue"
+							fi
+						fi
+					done < "$repo_name"
+					let "nOpIssues += max_issue"
+				fi
+				let "nissues += max_issue"
+			fi
+			if [[ "$l" == *"\"size\""* ]]
+			then
+				size=`echo $l | cut -d " " -f 2`
+				let "tsize += size"
+			fi
+		done < "$u"
+		if [ $does_pr -eq 1 ]
+		then
+			let "pr_users += 1"
+		fi
+		if [ $uses_m -eq 1 ]
+		then
+			let "m_users += 1"
+		fi
+	fi
+done < userlist
+
+let "nissues /= countRep"
+let "nOpIssues /= activeRep"
+let "tsize /= countRep"
+echo " "
+echo "On $count users $pr_users have used pull requests, $m_users have used milestones and there is on average $nrepos repositories per user"
+echo "The data from $countRep of these repositories have been analyzed. " 
+echo "Only a part of all these user's repositories have been analyzed because not all the repositories' data is available through the GitHub API" 
+echo "On average, a minimum of $nissues issues have been found for each repository and each repository weights on average $tsize bytes"
+echo "Taking in consideration only the repositories that we are sure to be currently active, on average a minimum of $nOpIssues issues have been found for each repository"
+
+date -u
+echo " "
+exit

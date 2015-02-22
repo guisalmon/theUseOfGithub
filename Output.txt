@@ -1,0 +1,314 @@
+søn jan 11 13:01:49 UTC 2015
+
+Retrieving usernames...
+Done retrieving usernames, retrieving user details... (can be long)
+1/100
+https://api.github.com/users/mojombo
+2/100
+https://api.github.com/users/defunkt
+3/100
+https://api.github.com/users/pjhyett
+4/100
+https://api.github.com/users/wycats
+5/100
+https://api.github.com/users/ezmobius
+6/100
+https://api.github.com/users/ivey
+7/100
+https://api.github.com/users/evanphx
+8/100
+https://api.github.com/users/vanpelt
+9/100
+https://api.github.com/users/wayneeseguin
+10/100
+https://api.github.com/users/brynary
+11/100
+https://api.github.com/users/kevinclark
+12/100
+https://api.github.com/users/technoweenie
+13/100
+https://api.github.com/users/macournoyer
+14/100
+https://api.github.com/users/takeo
+15/100
+https://api.github.com/users/Caged
+16/100
+https://api.github.com/users/topfunky
+17/100
+https://api.github.com/users/anotherjesse
+18/100
+https://api.github.com/users/roland
+19/100
+https://api.github.com/users/lukas
+20/100
+https://api.github.com/users/fanvsfan
+21/100
+https://api.github.com/users/tomtt
+22/100
+https://api.github.com/users/railsjitsu
+23/100
+https://api.github.com/users/nitay
+24/100
+https://api.github.com/users/kevwil
+25/100
+https://api.github.com/users/KirinDave
+26/100
+https://api.github.com/users/jamesgolick
+27/100
+https://api.github.com/users/atmos
+28/100
+https://api.github.com/users/errfree
+29/100
+https://api.github.com/users/mojodna
+30/100
+https://api.github.com/users/bmizerany
+31/100
+https://api.github.com/users/jnewland
+32/100
+https://api.github.com/users/joshknowles
+33/100
+https://api.github.com/users/hornbeck
+34/100
+https://api.github.com/users/jwhitmire
+35/100
+https://api.github.com/users/elbowdonkey
+36/100
+https://api.github.com/users/reinh
+37/100
+https://api.github.com/users/timocratic
+38/100
+https://api.github.com/users/bs
+39/100
+https://api.github.com/users/rsanheim
+40/100
+https://api.github.com/users/schacon
+41/100
+https://api.github.com/users/uggedal
+42/100
+https://api.github.com/users/bruce
+43/100
+https://api.github.com/users/sam
+44/100
+https://api.github.com/users/mmower
+45/100
+https://api.github.com/users/abhay
+46/100
+https://api.github.com/users/rabble
+47/100
+https://api.github.com/users/benburkert
+48/100
+https://api.github.com/users/indirect
+49/100
+https://api.github.com/users/fearoffish
+50/100
+https://api.github.com/users/ry
+51/100
+https://api.github.com/users/engineyard
+52/100
+https://api.github.com/users/jsierles
+53/100
+https://api.github.com/users/tweibley
+54/100
+https://api.github.com/users/peimei
+55/100
+https://api.github.com/users/brixen
+56/100
+https://api.github.com/users/tmornini
+57/100
+https://api.github.com/users/outerim
+58/100
+https://api.github.com/users/daksis
+59/100
+https://api.github.com/users/sr
+60/100
+https://api.github.com/users/lifo
+61/100
+https://api.github.com/users/rsl
+62/100
+https://api.github.com/users/imownbey
+63/100
+https://api.github.com/users/dylanegan
+64/100
+https://api.github.com/users/jm
+65/100
+https://api.github.com/users/willcodeforfoo
+66/100
+https://api.github.com/users/jvantuyl
+67/100
+https://api.github.com/users/BrianTheCoder
+68/100
+https://api.github.com/users/freeformz
+69/100
+https://api.github.com/users/hassox
+70/100
+https://api.github.com/users/automatthew
+71/100
+https://api.github.com/users/queso
+72/100
+https://api.github.com/users/lancecarlson
+73/100
+https://api.github.com/users/drnic
+74/100
+https://api.github.com/users/lukesutton
+75/100
+https://api.github.com/users/danwrong
+76/100
+https://api.github.com/users/hcatlin
+77/100
+https://api.github.com/users/jfrost
+78/100
+https://api.github.com/users/mattetti
+79/100
+https://api.github.com/users/ctennis
+80/100
+https://api.github.com/users/lawrencepit
+81/100
+https://api.github.com/users/marcjeanson
+82/100
+https://api.github.com/users/grempe
+83/100
+https://api.github.com/users/peterc
+84/100
+https://api.github.com/users/ministrycentered
+85/100
+https://api.github.com/users/afarnham
+86/100
+https://api.github.com/users/up_the_irons
+87/100
+https://api.github.com/users/cristibalan
+88/100
+https://api.github.com/users/heavysixer
+89/100
+https://api.github.com/users/brosner
+90/100
+https://api.github.com/users/danielmorrison
+91/100
+https://api.github.com/users/danielharan
+92/100
+https://api.github.com/users/kvnsmth
+93/100
+https://api.github.com/users/collectiveidea
+94/100
+https://api.github.com/users/canadaduane
+95/100
+https://api.github.com/users/nate
+96/100
+https://api.github.com/users/dstrelau
+97/100
+https://api.github.com/users/sunny
+98/100
+https://api.github.com/users/dkubb
+99/100
+https://api.github.com/users/jnicklas
+100/100
+https://api.github.com/users/richcollins
+Done retrieving user details
+Retrieving and crushing repositories' data from all users... (can be long enough to take a coffee)
+User 1 of 100 being processed
+User 2 of 100 being processed
+User 3 of 100 being processed
+User 4 of 100 being processed
+User 5 of 100 being processed
+User 6 of 100 being processed
+User 7 of 100 being processed
+User 8 of 100 being processed
+User 9 of 100 being processed
+User 10 of 100 being processed
+User 11 of 100 being processed
+User 12 of 100 being processed
+User 13 of 100 being processed
+User 14 of 100 being processed
+User 15 of 100 being processed
+User 16 of 100 being processed
+User 17 of 100 being processed
+User 18 of 100 being processed
+User 19 of 100 being processed
+User 20 of 100 being processed
+User 21 of 100 being processed
+User 22 of 100 being processed
+User 23 of 100 being processed
+User 24 of 100 being processed
+User 25 of 100 being processed
+User 26 of 100 being processed
+User 27 of 100 being processed
+User 28 of 100 being processed
+User 29 of 100 being processed
+User 30 of 100 being processed
+User 31 of 100 being processed
+User 32 of 100 being processed
+User 33 of 100 being processed
+User 34 of 100 being processed
+User 35 of 100 being processed
+User 36 of 100 being processed
+User 37 of 100 being processed
+User 38 of 100 being processed
+User 39 of 100 being processed
+User 40 of 100 being processed
+User 41 of 100 being processed
+User 42 of 100 being processed
+User 43 of 100 being processed
+User 44 of 100 being processed
+User 45 of 100 being processed
+User 46 of 100 being processed
+User 47 of 100 being processed
+User 48 of 100 being processed
+User 49 of 100 being processed
+User 50 of 100 being processed
+User 51 of 100 being processed
+User 52 of 100 being processed
+User 53 of 100 being processed
+User 54 of 100 being processed
+User 55 of 100 being processed
+User 56 of 100 being processed
+User 57 of 100 being processed
+User 58 of 100 being processed
+User 59 of 100 being processed
+User 60 of 100 being processed
+User 61 of 100 being processed
+User 62 of 100 being processed
+User 63 of 100 being processed
+User 64 of 100 being processed
+User 65 of 100 being processed
+User 66 of 100 being processed
+User 67 of 100 being processed
+User 68 of 100 being processed
+User 69 of 100 being processed
+User 70 of 100 being processed
+User 71 of 100 being processed
+User 72 of 100 being processed
+User 73 of 100 being processed
+User 74 of 100 being processed
+User 75 of 100 being processed
+User 76 of 100 being processed
+User 77 of 100 being processed
+User 78 of 100 being processed
+User 79 of 100 being processed
+User 80 of 100 being processed
+User 81 of 100 being processed
+User 82 of 100 being processed
+User 83 of 100 being processed
+User 84 of 100 being processed
+User 85 of 100 being processed
+User 86 of 100 being processed
+User 87 of 100 being processed
+User 88 of 100 being processed
+User 89 of 100 being processed
+User 90 of 100 being processed
+User 91 of 100 being processed
+User 92 of 100 being processed
+User 93 of 100 being processed
+User 94 of 100 being processed
+User 95 of 100 being processed
+User 96 of 100 being processed
+User 97 of 100 being processed
+User 98 of 100 being processed
+User 99 of 100 being processed
+User 100 of 100 being processed
+ 
+On 100 users 49 have used pull requests, 52 have used milestones and there is on average 60 repositories per user
+The data from 2374 of these repositories have been analyzed. 
+Only a part of all these user's repositories have been analyzed because not all the repositories' data is available through the GitHub API
+On average, a minimum of 2 issues have been found for each repository and each repository weights on average 6139 bytes
+Taking in consideration only the repositories that we are sure to be currently active, on average a minimum of 27 issues have been found for each repository
+søn jan 11 13:48:58 UTC 2015
+ 
